@@ -3,13 +3,15 @@ const math = require('canvas-sketch-util/math');
 const random = require('canvas-sketch-util/random');
 
 const settings = {
-  dimensions: [1080, 1080]
+  dimensions: [1080, 1080],
+  animate: true
 };
 
 const sketch = ({
   context,
   width,
-  height
+  height,
+  frame
 }) => {
   const cells = [];
   const cols = 10;
@@ -26,7 +28,7 @@ const sketch = ({
   for (i = 0; i < numCells; i++) {
     const col = i % cols;
     const row = Math.floor(i / cols);
-    
+
     const x = col * cellW + margX;
     const y = row * cellH + margY;
     const w = cellW * 0.8;
@@ -39,7 +41,8 @@ const sketch = ({
   return ({
     context,
     width,
-    height
+    height,
+    frame
   }) => {
     context.fillStyle = 'white';
     context.fillRect(0, 0, width, height);
@@ -51,15 +54,15 @@ const sketch = ({
       context.translate(cell.cx, cell.cy);
 
       // return values from -1 to 1
-      const r = random.noise2D(cell.cx,cell.cy,0.001);
-      
+      const r = random.noise2D(cell.cx + frame * 10, cell.cy, 0.001);
+
       // rotation
       const angle = r * Math.PI * 0.2;
-      console.log(`angle:${angle}`);
+      // console.log(`angle:${angle}`);
       context.rotate(angle);
 
       // line width
-      const width = math.mapRange(r,-1,1,1,30);
+      const width = math.mapRange(r, -1, 1, 1, 30);
       context.lineWidth = width;
 
       context.beginPath()
