@@ -32,6 +32,17 @@ const sketch = ({
     context.fillStyle = 'white';
     context.fillRect(0, 0, width, height);
 
+    for (i=0;i<agents.length;i++){
+      let agent = agents[i];
+      for (j=i+1;j<agents.length;j++){
+        let other = agents[j];
+        context.beginPath();
+        context.moveTo(agent.pos.x, agent.pos.y);
+        context.lineTo(other.pos.x,other.pos.y);
+        context.stroke();
+      }
+    }
+
     agents.forEach(agent => {
       agent.update();
       agent.draw(context);
