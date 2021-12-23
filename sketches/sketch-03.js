@@ -36,6 +36,11 @@ const sketch = ({
       let agent = agents[i];
       for (j=i+1;j<agents.length;j++){
         let other = agents[j];
+
+        const dist = agent.distance(other);
+        if (dist > 200) continue
+
+        context.lineWidth = math.mapRange(dist,0,200,10,1);
         context.beginPath();
         context.moveTo(agent.pos.x, agent.pos.y);
         context.lineTo(other.pos.x,other.pos.y);
@@ -91,6 +96,17 @@ class Agent {
     this.move = new Movement(random.range(0, Math.PI * 2), 1);
     this.radius = random.range(4, 12);
     this.environment = env;
+  }
+
+  distance(otherAgent){
+    // console.log("agent" + otherAgent);
+    // console.log(`Agent:${this.pos.x} -${this.pos.y}`);
+    const dx = this.pos.x - otherAgent.pos.x;
+    const dy = this.pos.y - otherAgent.pos.y;
+    const dist = Math.sqrt(dx * dx + dy * dy);
+
+    // console.log(`distance: ${dist}`);
+    return dist;
   }
 
   update() {
