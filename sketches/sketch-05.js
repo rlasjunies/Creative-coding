@@ -17,9 +17,9 @@ const sketch = ({
   height
 }) => {
   const cell = 20;
-  const cols = Math.floor(width /cell);
+  const cols = Math.floor(width / cell);
   const rows = Math.floor(height / cell);
-  const numCells =  cols * rows;
+  const numCells = cols * rows;
 
   typeCanvas.width = cols;
   typeCanvas.height = rows;
@@ -49,14 +49,42 @@ const sketch = ({
 
     typeContext.translate(ctx, cty);
 
-    typeContext.beginPath();
-    typeContext.rect(mx, my, mw, mh);
-    typeContext.stroke();
+
+    //typeContext.beginPath();
+    // typeContext.fillStyle = 'yellow';
+    //typeContext.rect(mx, my, mw, mh);
+    //typeContext.stroke();
 
     typeContext.fillText(text, 0, 0);
     typeContext.restore();
+    // context.drawImage(typeCanvas, 0, 0);
 
-    context.drawImage(typeCanvas,0,0);
+    const typeData = typeContext.getImageData(0, 0, cols, rows).data;
+    // console.log(typeData);
+
+    for (i = 0; i < numCells; i++) {
+      const col = i % cols;
+      const row = Math.floor(i / cols);
+
+      const x = col * cell;
+      const y = row * cell;
+
+      const r = typeData[i * 4 + 0];
+      const g = typeData[i * 4 + 1];
+      const b = typeData[i * 4 + 2];
+      // const alpha = typeData[i * 4 + 4];
+
+
+      context.fillStyle = `rgb(${r},${g},${b})`;
+      context.save();
+      context.translate(x, y);
+      // context.fillRect(0,0,cell,cell);
+      context.beginPath();
+      context.arc(cell * 0.5, cell * 0.5, cell * 0.5, 0, Math.PI * 2);
+      context.fill();
+      context.restore();
+    }
+
   };
 };
 
