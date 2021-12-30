@@ -1,14 +1,3 @@
----
-title: "Title"
-author: "Author"
-date: "DATE"
-output: 
-  html_document:
-     css: font-awesome-4.4.0/css/font-awesome.css
-     self_contained: no
-
----
-
 # Library of creative coding in JS with canvas
 
 [Github Repository](https://github.com/rlasjunies/creative-coding)
@@ -19,7 +8,7 @@ img[alt=x200] { width: 200px; }
 
 ## [Matrix rain](./matrixrain/index.html)
 
-![x200](./matrixrain/output/20211230.2032.png?s=200)
+![x200](./matrixrain/output/20211230.2032.png?&s=200)
 [matrix rain](./matrixrain/index.html)
 
 ### 25 squares
