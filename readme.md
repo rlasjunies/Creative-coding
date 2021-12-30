@@ -1,23 +1,16 @@
 # Library of creative coding in JS with canvas
 
-[github.io](https://rlasjunies.github.io/Creative-coding/)
+|Website|Repositories|
+|---|---|
+|[rlasjunies.github.io/Creative-coding](https://rlasjunies.github.io/Creative-coding/)|[github/rlasjunies/creative-coding](https://github.com/rlasjunies/Creative-coding/)|
 
-## Matrix rain
+
+|Title      |Thumbnail             |run link    |repository   |
+|-----------|----------------------|------------|-------------|
+|Matrix rain|<img src="./matrixrain/output/20211230.2032.png" width="200"/>|[Run](./matrixrain/index.html)|[Github Repository](https://github.com/rlasjunies/creative-coding/tree/master/matrixrain)|
+|25 squares|<img src="./25squares/output/25squares.png" width="200"/>|[Run](./25squares/25squares.html)|[Github Repository](https://github.com/rlasjunies/Creative-coding/tree/master/25squares)|
 
 
-
-<img src="./matrixrain/output/20211230.2032.png" width="200"/>
-
-[Run](./matrixrain/index.html)
-
-[Github Repository](https://github.com/rlasjunies/Creative-coding/tree/master/matrixrain) 
-
-## 25 squares
-<img src="./25squares/output/25squares.png" width="200"/>
-
-[Run](./25squares/25squares.html)
-
-[Github Repository](https://github.com/rlasjunies/Creative-coding/tree/master/25squares) 
 
 
 ## How to dev via vscode
