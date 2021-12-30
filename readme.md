@@ -19,7 +19,7 @@ img[alt=x200] { width: 200px; }
 
 ## [Matrix rain](./matrixrain/index.html)
 
-![x200](./matrixrain/output/20211230.2032.png)
+![x200](./matrixrain/output/20211230.2032.png?s=200)
 [matrix rain](./matrixrain/index.html)
 
 ### 25 squares
