@@ -4,7 +4,7 @@
 
 ## [Matrix rain](./matrixrain/index.html)
 
-<img src="./matrixrain/output/20211230.2032.png" width="200"/>[Github Repository](https://github.com/rlasjunies/creative-coding/matrixrain) 
+<img src="./matrixrain/output/20211230.2032.png" width="200"/>[Github Repository](./matrixrain) 
 
 ### 25 squares
 
