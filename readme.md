@@ -6,10 +6,8 @@
 
 <img src="./matrixrain/output/20211230.2032.png" width="200"/>[Github Repository](./matrixrain) 
 
-### 25 squares
-
-### 25 squares
-
+## [25 squares](./25 squares/25 squares.html)
+<img src="./25 squares/output/25 squares.png" width="200"/>[Github Repository](./25 squares/) 
 
 
 ## How to dev via vscode
