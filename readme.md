@@ -1,4 +1,21 @@
-Repository for the [Creative Coding training](https://www.domestika.org/fr/courses/2729-codage-creatif-creez-des-elements-visuels-avec-javascript/units/9668-fondamentaux)
+# Library of creative coding in JS with canvas
+
+[Github Repository](https://github.com/rlasjunies/creative-coding)
+
+<style>
+img[alt=x200] { width: 200px; }
+</style>
+
+## [Matrix rain](./matrixrain/index.html)
+
+![x200](./matrixrain/output/20211230.2032.png)
+[matrix rain](./matrixrain/index.html)
+
+### 25 squares
+
+### 25 squares
+
+
 
 ## How to dev via vscode
 
@@ -6,9 +23,6 @@ Repository for the [Creative Coding training](https://www.domestika.org/fr/cours
 
 * change the root view to the folder
 
-### Matrix rain
-
-[matrix rain](./matrixrain/index.html)
 
 ## Canvas sketch
 
@@ -24,6 +38,7 @@ canvas-sketch sketch-01.js --new
 canvas-sketch sketch-01.js --open --output=output/01
 
 ## link reference
+* Repository for the [Creative Coding training](https://www.domestika.org/fr/courses/2729-codage-creatif-creez-des-elements-visuels-avec-javascript/units/9668-fondamentaux)
 
 * https://github.com/mattdesl/canvas-sketch
   * [documentation](https://github.com/mattdesl/canvas-sketch/blob/master/docs/README.md)
