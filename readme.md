@@ -7,12 +7,16 @@
 
 
 <img src="./matrixrain/output/20211230.2032.png" width="200"/>
+
 [Run](./matrixrain/index.html)
+
 [Github Repository](https://github.com/rlasjunies/Creative-coding/tree/master/matrixrain) 
 
 ## 25 squares
 <img src="./25squares/output/25squares.png" width="200"/>
+
 [Run](./25squares/25squares.html)
+
 [Github Repository](https://github.com/rlasjunies/Creative-coding/tree/master/25squares) 
 
 
