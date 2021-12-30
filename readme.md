@@ -1,3 +1,14 @@
+---
+title: "Title"
+author: "Author"
+date: "DATE"
+output: 
+  html_document:
+     css: font-awesome-4.4.0/css/font-awesome.css
+     self_contained: no
+
+---
+
 # Library of creative coding in JS with canvas
 
 [Github Repository](https://github.com/rlasjunies/creative-coding)
