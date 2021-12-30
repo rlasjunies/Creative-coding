@@ -1,10 +1,10 @@
 # Library of creative coding in JS with canvas
 
-[Github Repository](https://github.com/rlasjunies/creative-coding)
+
 
 ## [Matrix rain](./matrixrain/index.html)
 
-<img src="./matrixrain/output/20211230.2032.png" width="200"/>
+<img src="./matrixrain/output/20211230.2032.png" width="200"/>[Github Repository](https://github.com/rlasjunies/creative-coding/matrixrain) 
 
 ### 25 squares
 
