@@ -1,14 +1,14 @@
-# Library of creative coding in JS with canvas
+# Creative coding in JS & Canvas
 
 |Website|Repositories|
 |---|---|
 |[rlasjunies.github.io/Creative-coding](https://rlasjunies.github.io/Creative-coding/)|[github/rlasjunies/creative-coding](https://github.com/rlasjunies/Creative-coding/)|
 
 
-|Thumbnail      |Title             |run link    |repository   |
-|-----------|----------------------|------------|-------------|
-|<img src="./25squares/output/25squares.png" width="200"/>|25 squares|[Run](./25squares/25squares.html)|[Github Repository](https://github.com/rlasjunies/Creative-coding/tree/master/25squares)|
-|<img src="./matrixrain/output/20211230.2032.png" width="200"/>|Matrix rain|[Run](./matrixrain/index.html)|[Github Repository](https://github.com/rlasjunies/creative-coding/tree/master/matrixrain)|
+|Thumbnail|Title             |Demo    |Code repository   |
+|:-----------:|----------------------|:------------:|:-------------:|
+|<img src="./25squares/output/25squares.png" width="200"/>|**25 squares**<br>Simple and basic setup.|[demo](./25squares/25squares.html)|[Github repository](https://github.com/rlasjunies/Creative-coding/tree/master/25squares)|
+|<img src="./matrixrain/output/20211230.2032.png" width="200"/>|**Matrix rain**<br>Full setup including setting pane.|[demo](./matrixrain/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/matrixrain)|
 
 
 
