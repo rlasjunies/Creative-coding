@@ -29,7 +29,7 @@ class Movement {
 }
 
 class Agent {
-  constructor(x, y ) {
+  constructor(x, y ) { 
     this.pos = new Point(x, y);
     this.move = new Movement(random_range(0, Math.PI * 2), 1);
     this.radius = random_range(4, 12);

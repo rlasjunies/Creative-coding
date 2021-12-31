@@ -11,14 +11,13 @@
 |<img src="./matrixrain/outputs/20211230.2032.png" width="200"/>|**Matrix rain**<br>Full setup including setting pane.|[demo](./matrixrain/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/matrixrain)|
 |<img src="./vibrating-circle/outputs/20211231-0937.png" width="200"/>|**Vibrating circle**<br>Enhanced panel with refresh or animation. Drawing is placed in a specific file|[demo](./vibrating-circle/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/vibrating-circle)|
 |<img src="./flying-connected-dots/outputs/20211231.1236.png" width="200"/>|**Flying connected dots**<br>Creation of agent and scene|[demo](./flying-connected-dots/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/flying-connected-dots)|
+|<img src="./wavy-rectangles/outputs/20211231-1529.png" width="200"/>|**Wavy rectangle**<br>Rectangles moving based on random simplex 3D noise.|[demo](./wavy-rectangles/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/wavy-rectangles)|
 
 
 ## How to dev via vscode?
 
 * install extension [livepreview'](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)
-* change the root view to the folder
-
-
+* right click on the the `index.html` you would like to implement
 <img src="./2021-12-31 12_40_10-.png" width="500"/>
 
 ## To do
