@@ -36,8 +36,8 @@ class Effect {
   }
   initialize() {
     for (let index = 0; index < this.columns; index++) {
-      const outOfTheCanvas = this.canvasHeight / this.fontSize + 1;
-      this.symbols[index] = new Symbol(index, outOfTheCanvas, this.fontSize, this.canvasHeight);
+      const startOutOfTheCanvas = this.canvasHeight / this.fontSize + 5;
+      this.symbols[index] = new Symbol(index, startOutOfTheCanvas, this.fontSize, this.canvasHeight);
     }
   }
 }
