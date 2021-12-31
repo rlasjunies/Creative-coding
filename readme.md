@@ -7,8 +7,8 @@
 
 |Thumbnail|Title             |Demo    |Code repository   |
 |:-----------:|----------------------|:------------:|:-------------:|
-|<img src="./25squares/output/25squares.png" width="200"/>|**25 squares**<br>Simple and basic setup.|[demo](./25squares/25squares.html)|[Github repository](https://github.com/rlasjunies/Creative-coding/tree/master/25squares)|
-|<img src="./matrixrain/output/20211230.2032.png" width="200"/>|**Matrix rain**<br>Full setup including setting pane.|[demo](./matrixrain/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/matrixrain)|
+|<img src="./25squares/outputs/25squares.png" width="200"/>|**25 squares**<br>Simple and basic setup.|[demo](./25squares/25squares.html)|[Github repository](https://github.com/rlasjunies/Creative-coding/tree/master/25squares)|
+|<img src="./matrixrain/outputs/20211230.2032.png" width="200"/>|**Matrix rain**<br>Full setup including setting pane.|[demo](./matrixrain/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/matrixrain)|
 
 
 
