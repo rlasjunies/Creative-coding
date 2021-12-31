@@ -12,6 +12,7 @@
 |<img src="./vibrating-circle/outputs/20211231-0937.png" width="200"/>|**Vibrating circle**<br>Enhanced panel with refresh or animation. Drawing is placed in a specific file|[demo](./vibrating-circle/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/vibrating-circle)|
 |<img src="./flying-connected-dots/outputs/20211231.1236.png" width="200"/>|**Flying connected dots**<br>Creation of agent and scene|[demo](./flying-connected-dots/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/flying-connected-dots)|
 |<img src="./wavy-rectangles/outputs/20211231-1529.png" width="200"/>|**Wavy rectangle**<br>Rectangles moving based on random simplex 3D noise.|[demo](./wavy-rectangles/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/wavy-rectangles)|
+|<img src="./letter-redesigned/outputs/20211231-1612.png" width="200"/>|**Letter redesigned**<br>Draw a letter with different glyphs|[demo](./letter-redesigned/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/letter-redesigned)|
 
 
 ## How to dev via vscode?
@@ -23,19 +24,6 @@
 ## To do
 
 * save button to save image including settings
-
-## Canvas sketch
-
-https://github.com/mattdesl/canvas-sketch
-
-```powershell
-npm install canvas-sketch-cli -g
-```
-
-### quick start
-canvas-sketch sketch-01.js --new
-
-canvas-sketch sketch-01.js --open --output=output/01
 
 ## link reference
 * Repository for the [Creative Coding training](https://www.domestika.org/fr/courses/2729-codage-creatif-creez-des-elements-visuels-avec-javascript/units/9668-fondamentaux)

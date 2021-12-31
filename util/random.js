@@ -26,10 +26,25 @@ function random_noise3D(x, y, z, frequency, amplitude) {
 }
 
 
+function random_pick (array) {
+  if (array.length === 0) return undefined;
+  return array[rangeFloor(0, array.length)];
+}
+
+function rangeFloor (min, max) {
+  if (max === undefined) {
+    max = min;
+    min = 0;
+  }
+
+  if (typeof min !== 'number' || typeof max !== 'number') {
+    throw new TypeError('Expected all arguments to be numbers');
+  }
+
+  return Math.floor(random_range(min, max));
+}
+
 //reference: https://gist.github.com/esimov/9be66c7c9d02cf6fc1cb
-
-
-
 class SimplexNoise {
 
   octaveFreq() {
