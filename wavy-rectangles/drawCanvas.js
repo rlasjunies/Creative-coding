@@ -57,8 +57,8 @@ function drawCanvas(frame) {
     // return values from -1 to 1
     //const r = random.noise2D(cell.cx + frame * 10, cell.cy, 0.001);
     //const f = params.animate ? frame : params.frame;
-    const r = random_noise3D(cell.cx, cell.cy, loopCounter * 10, 0.001);
-
+    //const r = random_noise3D(cell.cx, cell.cy, loopCounter * 7, 0.003);
+    const r = random_noise3D(cell.cx, cell.cy, loopCounter * settings.frequency, settings.amplitude / 3000)
     // rotation
     const angle = r * Math.PI * 0.2;
     // console.log(`angle:${angle}`);

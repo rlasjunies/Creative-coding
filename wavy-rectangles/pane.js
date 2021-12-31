@@ -1,10 +1,12 @@
 const settings = {
-    width: 400,
-    height: 400,
+    width: 600,
+    height: 600,
     animate: true,
     fps: 100,
-    cols:10,
-    rows:10,
+    cols:20,
+    rows:20, 
+    frequency:7,
+    amplitude:9,
 }
 
 let previousSetting = JSON.parse(JSON.stringify(settings));
@@ -60,14 +62,25 @@ const createPane = () => {
     });
 
     folder.addInput(settings, 'cols', {
-        min: 0,
-        max: 20,
+        min: 5,
+        max: 40,
         step: 1,
     });
     folder.addInput(settings, 'rows', {
-        min: 0,
-        max: 20,
+        min: 5,
+        max: 40,
         step: 1,
     });
+    folder.addInput(settings, 'frequency', {
+        min: 1,
+        max: 40,
+        step: 1,
+    });
+    folder.addInput(settings, 'amplitude', {
+        min: 1,
+        max: 40,
+        step: 1,
+    });
+
 
 }
