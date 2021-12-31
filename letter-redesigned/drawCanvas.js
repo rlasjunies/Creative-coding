@@ -76,11 +76,11 @@ const randomizedFont = () => {
       break;
     case r < 0.9: 
       fontSize = settings.fontSize
-      console.log(`r:${r}`);
+      // console.log(`r:${r}`);
       break;
     default:
       fontSize = settings.fontSize * 2;
-      console.log(`default r:${r}`);
+      // console.log(`default r:${r}`);
 
   }
 
