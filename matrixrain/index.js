@@ -8,11 +8,13 @@ class Symbol {
     this.canvasHeight = canvasHeight;
   }
   draw(context) {
+
     this.text = this.chars.charAt(Math.floor(Math.random() * this.chars.length));
     // console.log(`draw(${this.x},${this.y}) - ${this.text}`);
     context.fillStyle = '#0aff0a';
     context.textAlign = 'center';
     context.fillText(this.text, this.x * this.fontSize, this.y * this.fontSize);
+
     const biggerThanCanvasHeight = this.y * this.fontSize > this.canvasHeight;
     const randomizedRestartRain = Math.random() > 0.98;
     if (biggerThanCanvasHeight && randomizedRestartRain) {
@@ -20,7 +22,6 @@ class Symbol {
     } else {
       this.y += 1;
     }
-
   }
 }
 
@@ -29,54 +30,53 @@ class Effect {
     this.canvasWidth = canvasWidth;
     this.canvasHeight = canvasHeight;
     this.fontSize = 25;
-    this.columns = this.canvasWidth / this.fontSize;
+    this.columns = canvasWidth / this.fontSize;
     this.symbols = [];
     this.initialize();
   }
   initialize() {
     for (let index = 0; index < this.columns; index++) {
-      this.symbols[index] = new Symbol(index, this.canvasHeight / this.fontSize, this.fontSize, this.canvasHeight);
+      const outOfTheCanvas = this.canvasHeight / this.fontSize + 1;
+      this.symbols[index] = new Symbol(index, outOfTheCanvas, this.fontSize, this.canvasHeight);
     }
   }
 }
 
-const { width, height, context } = initializeCanvas();
-// console.log(`canvas height:${canvas.height}`);
+const canvas = document.getElementById('canvaselmt');
+const context = canvas.getContext('2d');
 
-const effect = new Effect(width, height);
-context.font = effect.fontSize + 'px monospace';
+const effect = new Effect(settings.width, settings.height);
+// context.font = effect.fontSize + 'px monospace';
 
 let lastTime = 0;
-const fps=20;
-const nextFrame = 1000/fps;
-let timer=0;
+let timer = 0;
 
+createPane();
 animate(0);
 
-function initializeCanvas() {
-  const canvas = document.getElementById('canvaselmt');
-  const context = canvas.getContext('2d');
-  const width = window.innerWidth;
-  const height = window.innerHeight;
-  canvas.width = width;
-  canvas.height = height;
-  return { width, height, context };
-}
+canvas.width = settings.width;
+canvas.height = settings.height;
+
 
 function animate(timeStamp) {
+  const nextFrame = 1000 / settings.fps;
+  if (canvas.width !== Math.floor(settings.width)) canvas.width = settings.width;
+  if (canvas.height !== settings.height) canvas.height = settings.height;
+  context.font = effect.fontSize + 'px monospace';
+
   const deltaTime = timeStamp - lastTime;
   lastTime = timeStamp;
-  console.log(`${deltaTime} - lastime:${lastTime}`);
+  // console.log(`${deltaTime} - lastime:${lastTime}`);
 
-  if( timer > nextFrame ) {
-    // context.fillStyle = 'black';
+
+  if (timer > nextFrame) {
     context.fillStyle = 'rgba(0,0,0,0.05)';
-    context.fillRect(0, 0, width, height);
+    context.fillRect(0, 0, canvas.width, canvas.height);
     effect.symbols.forEach(symbol => symbol.draw(context));
     timer = 0;
   } else {
     timer += deltaTime;
   }
-  
+
   requestAnimationFrame(animate);
 }
