@@ -9,16 +9,17 @@
 |:-----------:|----------------------|:------------:|:-------------:|
 |<img src="./25squares/outputs/25squares.png" width="200"/>|**25 squares**<br>Simple and basic setup.|[demo](./25squares/25squares.html)|[Github repository](https://github.com/rlasjunies/Creative-coding/tree/master/25squares)|
 |<img src="./matrixrain/outputs/20211230.2032.png" width="200"/>|**Matrix rain**<br>Full setup including setting pane.|[demo](./matrixrain/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/matrixrain)|
-
-
+|<img src="./vibrating-circle/outputs/20211231-0937.png" width="200"/>|**Vibrating circle**<br>Enhanced panel with refresh or animation. Drawing is placed in a specific file|[demo](./vibrating-circle/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/vibrating-circle)|
 
 
 ## How to dev via vscode
 
 * install extension [livepreview'](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)
-
 * change the root view to the folder
 
+## To do
+
+* save button to save image including settings
 
 ## Canvas sketch
 
