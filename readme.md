@@ -1,5 +1,7 @@
 # Creative coding in JS & Canvas
 
+These different projects/examples does not need external dependencies, everything needed are in the folder of the examples. It run in browser, just click in the `demo` link of the examples and you can play with several variables impacting the "beauty" of the exercise.
+
 |Website|Repositories|
 |---|---|
 |[rlasjunies.github.io/Creative-coding](https://rlasjunies.github.io/Creative-coding/)|[github/rlasjunies/creative-coding](https://github.com/rlasjunies/Creative-coding/)|
@@ -13,6 +15,7 @@
 |<img src="./flying-connected-dots/outputs/20211231.1236.png" width="200"/>|**Flying connected dots**<br>Creation of agent and scene|[demo](./flying-connected-dots/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/flying-connected-dots)|
 |<img src="./wavy-rectangles/outputs/20211231-1529.png" width="200"/>|**Wavy rectangle**<br>Rectangles moving based on random simplex 3D noise.|[demo](./wavy-rectangles/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/wavy-rectangles)|
 |<img src="./letter-redesigned/outputs/20211231-1612.png" width="200"/>|**Letter redesigned**<br>Draw a letter with different glyphs|[demo](./letter-redesigned/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/letter-redesigned)|
+|<img src="./flow-field-effect/outputs/2022-01-01 11_42_54-Wavy rectangles and 2 more pages - Work 2 - Microsoft​ Edge.png" width="200"/>|**Flow field effect**<br>Draw small lines following trigonometric pattern.Play with a lot of variable and automatic variations|[demo](./flow-field-effect/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/flow-field-effect)|
 
 
 ## How to dev via vscode?
