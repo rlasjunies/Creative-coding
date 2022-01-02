@@ -23,11 +23,11 @@ These different projects/examples does not need external dependencies, everythin
 
 * In vscode, install extension [livepreview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)
 * Right click on the the `index.html` you would like to visualize
-<img src="./screenshots/2022-01-02 08_57_55.png" width="500"/>
+<img src="./_screenshots/2022-01-02 08_57_55.png" width="500"/>
 * Do not hesitate to open it in an external browser
-<img src="./screenshots/2022-01-02 09_04_30.png" width="500"/>
+<img src="./_screenshots/2022-01-02 09_04_30.png" width="500"/>
 * In the external browser open the developer mode with 'F12'
-<img src="./screenshots/2022-01-02 09_08_22.png" width="500"/>
+<img src="./_screenshots/2022-01-02 09_08_22.png" width="500"/>
 
 ## To do
 
