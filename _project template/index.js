@@ -1,65 +1,63 @@
-import { drawCanvas, titleOfTheProject } from "./drawCanvas.js";
-import { createPane, settings } from "./pane.js";
-
-const canvas = document.getElementById('canvaselmt');
-const context = canvas.getContext('2d');
-
+// import { drawCanvas, titleOfTheProject, init as canvasInit, settingsChanged } from "./drawCanvas.js";
+import * as canvasUtil from "./canvas.js";
+import * as sketch from "./sketch.js";
+import {
+  createPane,
+  settings
+} from "./pane.js";
+// import {
+//   init as inputInit
+// } from "./input.js";
 
 let lastTime = 0;
 let timer = 0;
-let drawn = false;
-let loopCounter=0;
 let previousSetting = JSON.parse(JSON.stringify(settings));
 
-document.title = titleOfTheProject;
-createPane();
-loop(0);
- 
-function loop(timeStamp) {
+const settingsChanged = (ev) => {
+  console.log(JSON.stringify(ev));
+  // sketch.init();
+  canvasUtil.resizeCanvasIfSettingsChanged();
+  sketch.settingsChanged(ev, previousSetting);
+}
+
+const refreshStaticDraw = () => {
+  console.log("refreshStaticDraw");
+  sketch.draw();
+};
+
+document.title = sketch.titleOfTheProject;
+createPane(settingsChanged, refreshStaticDraw);
+
+canvasUtil.resizeCanvasIfSettingsChanged();
+sketch.init();
+if (settings.mode === 'animate') {
+  infiniteLoop(0);
+} else {
+  sketch.draw();
+}
+
+
+
+function infiniteLoop(timeStamp) {
   const nextFrame = 1000 / settings.fps;
-  if (JSON.stringify(settings) !== JSON.stringify(previousSetting)) {
-    drawn = false;
-    // console.log(settings, previousSetting);
-  }
+  // if (JSON.stringify(settings) !== JSON.stringify(previousSetting)) sketch.settingsChanged(settings,previousSetting);
+
   const deltaTime = timeStamp - lastTime;
   lastTime = timeStamp;
-  // console.log(`${deltaTime} - lastime:${lastTime}`);
+  // console.log(`${deltaTime} - lastTime:${lastTime}`);
 
   if (timer > nextFrame) {
-    if (settings.animate || !drawn) {
-      resizeCanvasIfSettingsChanged();
-      cleanCanvas();    
-      drawCanvas(timeStamp);
-      drawn = true;
-      previousSetting = JSON.parse(JSON.stringify(settings));
-      loopCounter+=1;
-    }
+    // if (settings.animate || !settings.drawn) {
+    canvasUtil.cleanCanvas();
+    sketch.draw(timeStamp);
+    // settings.drawn = true;
+    previousSetting = JSON.parse(JSON.stringify(settings));
+    // }
     timer = 0;
   } else {
     timer += deltaTime;
   }
 
-  requestAnimationFrame(loop);
+  if (settings.mode === 'animate') requestAnimationFrame(infiniteLoop);
 }
 
-function cleanCanvas() {
-  context.fillStyle = 'black';
-  context.fillRect(0, 0, settings.width, settings.height);
-}
-
-function resizeCanvasIfSettingsChanged() {
-  if (canvas.width !== Math.floor(settings.width))
-    canvas.width = settings.width;
-  if (canvas.height !== Math.floor(settings.height))
-    canvas.height = settings.height;
-}
-
-const mouse = {
-  x: 0,
-  y: 0,
-}
-canvas.addEventListener('mousemove', (e) => {
-  mouse.x = e.x - e.target.offsetLeft;
-  mouse.y = e.y - e.target.offsetTop;
-  // console.log(mouse);
-});
