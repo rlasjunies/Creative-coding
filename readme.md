@@ -16,13 +16,18 @@ These different projects/examples does not need external dependencies, everythin
 |<img src="./wavy-rectangles/outputs/20211231-1529.png" width="200"/>|**Wavy rectangle**<br>Rectangles moving based on random simplex 3D noise.|[demo](./wavy-rectangles/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/wavy-rectangles)|
 |<img src="./letter-redesigned/outputs/20211231-1612.png" width="200"/>|**Letter redesigned**<br>Draw a letter with different glyphs|[demo](./letter-redesigned/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/letter-redesigned)|
 |<img src="./flow-field-effect/outputs/2022-01-01 11_42_54-Wavy rectangles and 2 more pages - Work 2 - Microsoft​ Edge.png" width="200"/>|**Flow field effect**<br>Draw small lines following trigonometric pattern.Play with a lot of variable and automatic variations|[demo](./flow-field-effect/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/flow-field-effect)|
+|<img src="./particules/outputs/2022-01-02 08_47_47-Particules.png" width="200"/>|**Mouse particules interaction**<br>Particules move away to the mouse and then come back to initial positioning, simulating physic interaction.|[demo](./particules/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/particules)|
 
 
-## How to dev via vscode?
+## Easy dev setup using vscode?
 
-* install extension [livepreview'](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)
-* right click on the the `index.html` you would like to implement
-<img src="./2021-12-31 12_40_10-.png" width="500"/>
+* In vscode, install extension [livepreview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)
+* Right click on the the `index.html` you would like to visualize
+<img src="./screenshots/2022-01-02 08_57_55.png" width="500"/>
+* Do not hesitate to open it in an external browser
+<img src="./screenshots/2022-01-02 09_04_30.png" width="500"/>
+* In the external browser open the developer mode with 'F12'
+<img src="./screenshots/2022-01-02 09_08_22.png" width="500"/>
 
 ## To do
 
@@ -36,6 +41,5 @@ These different projects/examples does not need external dependencies, everythin
 
 * https://www.w3schools.com/tags/ref_canvas.asp
 
-* https://www.youtube.com/watch?v=f5ZswIE_SgY
+* [Franks laboratory - youtube channel](https://www.youtube.com/channel/UCEqc149iR-ALYkGM6TG-7vQ)
 
-* 
