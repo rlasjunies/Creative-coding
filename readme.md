@@ -17,6 +17,7 @@ These different projects/examples does not need external dependencies, everythin
 |<img src="./letter-redesigned/outputs/20211231-1612.png" width="200"/>|**Letter redesigned**<br>Draw a keyboard typed letter with different glyphs |[demo](./letter-redesigned/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/letter-redesigned)|
 |<img src="./flow-field-effect/outputs/2022-01-01 11_42_54-Wavy rectangles and 2 more pages - Work 2 - Microsoft​ Edge.png" width="200"/>|**Flow field effect**<br>Draw small lines following trigonometric pattern.Play with a lot of variable and automatic variations|[demo](./flow-field-effect/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/flow-field-effect)|
 |<img src="./particules/outputs/2022-01-02 08_47_47-Particules.png" width="200"/>|**Mouse particules interaction**<br>Particules move away to the mouse and then come back to initial positioning, simulating physic interaction.|[demo](./particules/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/particules)|
+|<img src="./eiffel-letter/outputs/2022-01-02 16_43_12-Eiffel letter.png" width="200"/>|**Eiffel letter**<br>Create constellation of particules inside letters including interaction with mouse pointer|[demo](./eiffel-letter/index.html)|[Github repository](https://github.com/rlasjunies/creative-coding/tree/master/eiffel-letter)|
 
 
 ## Easy dev setup using vscode?
