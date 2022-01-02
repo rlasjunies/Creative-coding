@@ -14,8 +14,9 @@ export const init = () => {
     // }
 }
 
-export const settingsChanged = (newSettings, oldSettings) => {
-    // if (newSettings.width != oldSettings.width) init();
+export const settingsChanged = (deltaSettings) => {
+    // use of detla settings
+    // if (delta.setting != oldSettings.width) init();
     // if (newSettings.height != oldSettings.height) init();
     // if (newSettings.particulesNumber != oldSettings.particulesNumber) init();
     

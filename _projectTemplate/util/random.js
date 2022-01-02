@@ -1,4 +1,4 @@
-export function random_range(min, max) {
+export function range(min, max) {
   if (max === undefined) {
     max = min;
     min = 0;
@@ -11,7 +11,7 @@ export function random_range(min, max) {
   return Math.random() * (max - min) + min;
 }
 
-export function random_noise3D(x, y, z, frequency, amplitude) {
+export function noise3D(x, y, z, frequency, amplitude) {
   if (!isFinite(x)) throw new TypeError('x component for noise() must be finite');
   if (!isFinite(y)) throw new TypeError('y component for noise() must be finite');
   if (!isFinite(z)) throw new TypeError('z component for noise() must be finite');
@@ -26,7 +26,7 @@ export function random_noise3D(x, y, z, frequency, amplitude) {
 }
 
 
-export function random_pick (array) {
+export function pick (array) {
   if (array.length === 0) return undefined;
   return array[rangeFloor(0, array.length)];
 }
@@ -41,7 +41,7 @@ export function rangeFloor (min, max) {
     throw new TypeError('Expected all arguments to be numbers');
   }
 
-  return Math.floor(random_range(min, max));
+  return Math.floor(range(min, max));
 }
 
 //reference: https://gist.github.com/esimov/9be66c7c9d02cf6fc1cb

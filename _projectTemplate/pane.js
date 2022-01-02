@@ -7,7 +7,15 @@ export const settings = {
     mouseDistance: 100,
 }
 
-export function createPane(cbSettingsChanged, cbRefreshStatic) {
+export const previousSetting = JSON.parse(JSON.stringify(settings));
+export const sizeModified = (deltaSettings) =>{
+    return (deltaSettings.key === 'width') || (deltaSettings.key === 'height' );
+}
+export const modeModified = (deltaSettings) =>{
+    return (deltaSettings.key === 'mode');
+}
+
+export function create(cbSettingsChanged, cbRefreshStatic) {
     const pane = new Tweakpane.Pane({
         container: document.getElementById('panecontainer'),
     });
@@ -81,6 +89,6 @@ export function createPane(cbSettingsChanged, cbRefreshStatic) {
 
     pane.on('change', (ev) => {
         // console.log(ev);
-        if ( ev.last) cbSettingsChanged({presetKey: ev.presetKey, value:ev.value});
+        if ( ev.last) cbSettingsChanged({key: ev.presetKey, value:ev.value});
     });
 }
