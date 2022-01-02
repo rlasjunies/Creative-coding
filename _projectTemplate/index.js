@@ -1,4 +1,4 @@
-import * as canvasUtil from "./canvas.js";
+import * as sketchCanvas from "./canvas.js";
 import * as sketch from "./sketch.js";
 import * as pane from "./pane.js";
 
@@ -9,8 +9,7 @@ const settingsChanged_PaneCallback = (deltaSettings) => {
   // console.log(JSON.stringify(deltaSettings));
 
   // predefined changes reaction
-  if (pane.sizeModified(deltaSettings)) canvasUtil.resizeCanvasBasedOnSettings();
-  if (pane.modeModified(deltaSettings)) startSketching();
+  if (pane.sizeModified(deltaSettings) || pane.modeModified(deltaSettings)) startSketching();
 
   sketch.settingsChanged(deltaSettings);
 }
@@ -27,7 +26,7 @@ startSketching();
 
 function startSketching() {
   document.title = sketch.titleOfTheProject;
-  canvasUtil.resizeCanvasBasedOnSettings();
+  sketchCanvas.resizeCanvasBasedOnSettings();
   sketch.init();
   if (pane.settings.mode === 'animate') {
     infiniteLoop(0);
@@ -44,7 +43,7 @@ function infiniteLoop(timeStamp) {
   // console.log(`${deltaTime} - lastTime:${lastTime}`);
 
   if (timer > nextFrame) {
-    canvasUtil.cleanCanvas();
+    sketchCanvas.cleanCanvas();
     sketch.draw(timeStamp);
     timer = 0;
   } else {

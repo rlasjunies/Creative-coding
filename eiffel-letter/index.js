@@ -1,4 +1,4 @@
-import * as canvas from "./canvas.js";
+import * as sketchCanvas from "./canvas.js";
 import * as sketch from "./sketch.js";
 import * as pane from "./pane.js";
 
@@ -26,7 +26,7 @@ startSketching();
 
 function startSketching() {
   document.title = sketch.titleOfTheProject;
-  canvas.resizeCanvasBasedOnSettings();
+  sketchCanvas.resizeCanvasBasedOnSettings();
   sketch.init();
   if (pane.settings.mode === 'animate') {
     infiniteLoop(0);
@@ -43,7 +43,7 @@ function infiniteLoop(timeStamp) {
   // console.log(`${deltaTime} - lastTime:${lastTime}`);
 
   if (timer > nextFrame) {
-    canvas.cleanCanvas();
+    sketchCanvas.cleanCanvas();
     sketch.draw(timeStamp);
     timer = 0;
   } else {

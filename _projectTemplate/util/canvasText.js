@@ -1,34 +1,44 @@
-export const getTextCanvasImageData= (cols, rows, text) => {
+import * as canvas from '../canvas.js';
+export const getTextCanvasImageData = (fontSize, text) => {
     const typeCanvas = document.createElement('canvas');
     const typeContext = typeCanvas.getContext('2d');
-    typeCanvas.width = cols;
-    typeCanvas.height = rows;
 
-    return typeTemplate(typeContext, cols, rows, text).getImageData(0, 0, cols, rows).data;
+    const {
+        textWidth: textW,
+        textHeight: textH
+    } = typeText(typeContext, text, fontSize, 'Cascadia Mono');
+    const imgData = typeContext.getImageData(0, 0, textW, textH);
+    //console.log(imgData);
+    typeCanvas.remove();
+    return imgData;
 }
 
+export const typeText = (typeContext, text, fontSize, fontFamily) => {
 
-export const typeTemplate = (typeContext, cols, rows, text) => {
+    // typeContext.fillStyle = 'blue';
+    // typeContext.fillRect(0, 0, cols * text.length, rows);
+    // typeContext.fillStyle = 'white';
 
-    typeContext.fillStyle = 'black';
-    typeContext.fillRect(0, 0, cols, rows);
-    typeContext.fillStyle = 'white';
-    fontSize = cols;
-    typeContext.font = `canvasText - typeTemplate: ${fontSize}px ${fontFamily}`;
-  
+    typeContext.font = `${fontSize}px ${fontFamily}`;
+
     const metrics = typeContext.measureText(text);
-    const mx = metrics.actualBoundingBoxLeft * -1;
-    const my = metrics.actualBoundingBoxAscent * -1;
+    const mx = metrics.actualBoundingBoxLeft;
+    const my = metrics.actualBoundingBoxAscent;
     const mw = metrics.actualBoundingBoxLeft + metrics.actualBoundingBoxRight
     const mh = metrics.actualBoundingBoxAscent + metrics.actualBoundingBoxDescent
-  
-    const ctx = (cols - mw) / 2 - mx;
-    const cty = (rows - mh) / 2 - my;
+    //console.log(`metrics:mx:${mx} my:${my} mw:${mw} mh:${mh}`);
+
+    // typeContext.fillStyle = 'rgb(200,100,100,0.8)';
+    // typeContext.fillRect(0, 0, mw, my );
+
     typeContext.save();
-  
-    typeContext.translate(ctx, cty);
+    typeContext.fillStyle = 'blue';
+    typeContext.translate(0, my);
     typeContext.fillText(text, 0, 0);
     typeContext.restore();
-  
-    return typeContext
-  }
+
+    return {
+        textWidth: mw,
+        textHeight: mh,
+    }
+}

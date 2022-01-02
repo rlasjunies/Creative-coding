@@ -61,7 +61,7 @@ export function create(cbSettingsChanged, cbRefreshStatic) {
             //settings.drawn = false;
             cbRefreshStatic();
         });
-    refreshButton.hidden = true;
+    if ( settings.mode == 'animate') refreshButton.hidden = true;
 
     const fpsInput = folder.addInput(settings, 'fps', {
         min: 0,
